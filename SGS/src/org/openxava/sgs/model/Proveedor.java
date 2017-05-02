@@ -18,6 +18,7 @@ public class Proveedor extends Identifiable{
 	@Column(length=12) @Required
 	private String ruc;
 	
+	@Stereotype("TELEFONO") // La propiedad tel se usa para almacenar numeros de telefono
 	@Column(length=10) @Required
 	private String telProveedor;
 	
@@ -30,6 +31,7 @@ public class Proveedor extends Identifiable{
 	@Column(length=40) 
 	private String encargado;
 	
+	@Stereotype("TELEFONO") // La propiedad tel se usa para almacenar numeros de telefono
 	@Column(length=10) 
 	private String telEncargado;
 
