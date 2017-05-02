@@ -7,7 +7,7 @@ public class DetalleFactura {
 	
 	private int cantidad;
 	 
-    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private producto producto;
 
 	public int getCantidad() {
