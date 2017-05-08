@@ -23,6 +23,9 @@ public class producto extends Identifiable{
 	public enum uniMedida { unidad, kilogramo, metro }
 	
 	@Column(length=5) @Required 
+	private BigDecimal cantidad;
+	
+	@Column(length=5) @Required 
 	private BigDecimal stockMinimo;
 	
 	@ManyToOne( // La referencia se almacena como una relación en la base de datos
@@ -123,6 +126,14 @@ public class producto extends Identifiable{
 
 	public void setObservaciones(String observaciones) {
 		this.observaciones = observaciones;
+	}
+
+	public BigDecimal getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(BigDecimal cantidad) {
+		this.cantidad = cantidad;
 	} 
 
 }
