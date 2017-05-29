@@ -1,5 +1,7 @@
 package org.openxava.sgs.model;
 
+import java.math.*;
+
 import javax.persistence.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
@@ -18,7 +20,7 @@ public class Cliente {
 	public enum tipodoc { Cédula, Ruc }
 	
 	@Id @Column(length=40) @Required
-	private String nroDocumento;
+	private BigDecimal nroDocumento;
 	
 	@Column(length=40) @Required
 	private String razonSocial;
@@ -32,20 +34,20 @@ public class Cliente {
 		this.documento = documento;
 	}
 
-	public String getNroDocumento() {
-		return nroDocumento;
-	}
-
-	public void setNroDocumento(String nroDocumento) {
-		this.nroDocumento = nroDocumento;
-	}
-
 	public String getRazonSocial() {
 		return razonSocial;
 	}
 
 	public void setRazonSocial(String razonSocial) {
 		this.razonSocial = razonSocial;
+	}
+
+	public BigDecimal getNroDocumento() {
+		return nroDocumento;
+	}
+
+	public void setNroDocumento(BigDecimal nroDocumento) {
+		this.nroDocumento = nroDocumento;
 	}
 	
 	
