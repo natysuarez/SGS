@@ -6,6 +6,10 @@ import org.openxava.jpa.*;
 
 public class CalculadorSiguienteNumeroPorAño implements ICalculator{
 		
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int año; //This value will be add with his setter before calculated
 	 
     public Object calculate() throws Exception { 
